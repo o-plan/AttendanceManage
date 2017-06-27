@@ -1,0 +1,28 @@
+version: '2'
+services:
+    web:
+        build: ./docker/revel
+        command: revel run AttendanceManage
+        volumes:
+           - ./AttendanceManage:/go/src/AttendanceManage
+        ports:
+            - 9000:9000
+        links:
+            - db
+
+    db:
+        build: ./docker/mariadb
+        volumes:
+            - ./data/mariadb:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: oplRoot8931
+            MYSQL_PASSWORD: 4spyn3eb
+            MYSQL_USER: attUser
+            MYSQL_DB: AttendanceMange
+        ports:
+            - 23306:3306
+
+    web_server:
+        build: ./docker/nginx
+        ports:
+            - 80:80
