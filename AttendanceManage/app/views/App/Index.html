@@ -1,21 +1,15 @@
 {{set . "title" "Home"}}
 {{template "header.html" .}}
 
-<header class="jumbotron" style="background-color:#A9F16C">
   <div class="container">
-    <div class="row">
-      <h1>It works!</h1>
-      <p></p>
-    </div>
+    <form class="form-signin">
+      <h2 class="form-signin-heading">Log in</h2>
+      <label for="UserID" class="sr-only">UserID</label>
+      <input type="text" id="userId" class="form-control" placeholder="UserId" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="password" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
   </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="span6">
-      {{template "flash.html" .}}
-    </div>
-  </div>
-</div>
 
 {{template "footer.html" .}}
