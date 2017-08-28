@@ -40,6 +40,24 @@ func main() {
 					},
 				},
 			},
+			&revel.MethodType{
+				Name: "Input",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					16: []string{ 
+					},
+				},
+			},
+			&revel.MethodType{
+				Name: "TimeCard",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					20: []string{ 
+					},
+				},
+			},
 			
 		})
 	

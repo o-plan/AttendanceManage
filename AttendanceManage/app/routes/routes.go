@@ -15,6 +15,20 @@ func (_ tApp) Index(
 	return revel.MainRouter.Reverse("App.Index", args).URL
 }
 
+func (_ tApp) Input(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.Input", args).URL
+}
+
+func (_ tApp) TimeCard(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.TimeCard", args).URL
+}
+
 
 type tStatic struct {}
 var Static tStatic

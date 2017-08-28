@@ -1,8 +1,9 @@
 {{set . "title" "Home"}}
-{{template "header.html" .}}
+{{template "headerLogin.html" .}}
 
+  <br>
   <div class="container">
-    <form class="form-signin">
+    <form action="App/Home" class="form-signin" method="post">
       <h2 class="form-signin-heading">Log in</h2>
       <label for="UserID" class="sr-only">UserID</label>
       <input type="text" id="userId" class="form-control" placeholder="UserId" required autofocus>
